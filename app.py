@@ -1,6 +1,6 @@
 from flask import Flask, render_template
 
-from controllers.destinations_controller import treks_blueprint
+from controllers.treks_controller import treks_blueprint
 
 app = Flask(__name__)
 
