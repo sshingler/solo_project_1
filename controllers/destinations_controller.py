@@ -17,9 +17,17 @@ def delete_destination(id):
     destination_repository.delete(id)
     return redirect ('/')
 
-@destinations_blueprint.route("/destinations/new")
+@destinations_blueprint.route("/destinations/new", methods = ['GET'])
 def new_destination():
-    return render_template("destinations/new.html")
+    treks = trek_repository.select_all
+    return render_template("destinations/new.html", all_treks = treks)
 
-
+@destinations_blueprint.route("/destinations", methods = ['POST'])
+def create_destination():
+    destination_name = request.form['destination_name']
+    country = request.form['country']
+    continent = request.form['continent']
+    destination = Destination (destination_name, country, continent)
+    destination_repository.save(destination)
+    return redirect ('/')
 
