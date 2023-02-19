@@ -1,9 +1,17 @@
 {% extends "base.html" %}
-
 {% block content %}
 
+{% for destinations in all_destinations %} 
 
-All destinations here! 
+    <div class = "destination">
+        <div class = "destination_content">
+            <hr>
+            <p> {{destinations.destination_name}} </p>
+            <p> {{destinations.county}} </p>
+            <p> {{destinations.continent}} </p>
+        </div>
+    </div>
 
+{% endfor %}
 
 {% endblock %}

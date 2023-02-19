@@ -20,5 +20,5 @@ trek_repository.save(trek_1)
 trek_2 = Trek ("Glyders Traverse", 6.6, 1, "Traverse the Glyders via Tryfan", True, "Test notes 123", destination_1)
 trek_repository.save(trek_2)
 
-trek_3 = Trek ("Cairn Gorm & Ben Macdui", 17.5, 1, "Summit Ben Macdui crossing the Cairn Gorm Plateau", False, destination_2)
+trek_3 = Trek ("Cairn Gorm & Ben Macdui", 17.5, 1, "Summit Ben Macdui crossing the Cairn Gorm Plateau", False, "Test notes 123", destination_2)
 trek_repository.save(trek_3)

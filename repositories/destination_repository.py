@@ -17,7 +17,7 @@ def delete(id):
 def select_all():
     destinations = []
 
-    sql = "SELECT * FROM authors"
+    sql = "SELECT * FROM destinations"
     results = run_sql(sql)
 
     for row in results:

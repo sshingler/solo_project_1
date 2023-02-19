@@ -10,7 +10,7 @@ treks_blueprint = Blueprint("treks", __name__)
 @treks_blueprint.route("/destinations")
 def destinations():
     destinations = destination_repository.select_all()
-    return render_template ("destinations/index.html", all_destinations = destinations)
+    return render_template("destinations/index.html", all_destinations = destinations)
 
 @treks_blueprint.route("/treks")
 def treks():
