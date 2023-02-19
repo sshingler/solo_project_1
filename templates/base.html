@@ -4,9 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>TrekTracker!</title>
 </head>
 <body>
-    
+    <header>
+        <nav>
+          <ul class="menu">
+            <li><a href="/">Trek Home</a></li>
+            <li><a href="/templates/treks/index.html">Completed Treks</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <div class="container">
+        {% block content %}
+        
+        {% endblock %}
+      </div>
+
 </body>
 </html>
