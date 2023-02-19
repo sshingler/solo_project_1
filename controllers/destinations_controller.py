@@ -17,5 +17,9 @@ def delete_destination(id):
     destination_repository.delete(id)
     return redirect ('/')
 
-    
+@destinations_blueprint.route("/destinations/new")
+def new_destination():
+    return render_template("destinations/new.html")
+
+
 
