@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
 
+<h3>All destinations:</h3>
+
+
+
 {% for destinations in all_destinations %} 
 
     <div class = "destination">
@@ -9,6 +13,11 @@
             <p> {{destinations.destination_name}} </p>
             <p> {{destinations.country}} </p>
             <p> {{destinations.continent}} </p>
+        </div>
+        <div class="buttons">
+            <form class = "delete_button" action = "/destinations/{{destinations.id}}/delete" method = "POST">
+                <button class="fa fa-trash-o fa-3x" style="color:red"></button>
+            </form>
         </div>
     </div>
 

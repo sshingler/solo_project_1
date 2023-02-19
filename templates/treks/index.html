@@ -12,8 +12,12 @@
             <p> Number of days: {{treks.trek_days}} </p>
             <p> Headline: {{treks.trek_headline}} </p>
             <p> Completed: {{treks.trek_completed}} </p>
-            <P> Notes: {{treks.trek_notes}} </p>
-            
+            <P> Notes: {{treks.trek_notes}} </p>  
+        </div>
+        <div class="buttons">
+            <form class = "delete_button" action = "/treks/{{treks.id}}/delete" method = "POST">
+                <button class="fa fa-trash-o fa-3x" style="color:red"></button>
+            </form>
         </div>
     </div>
 

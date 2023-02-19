@@ -7,8 +7,15 @@ import repositories.trek_repository as trek_repository
 
 destinations_blueprint = Blueprint("destinations", __name__)
 
-@destinations_blueprint.route("/destinations")
+@destinations_blueprint.route("/")
 def destinations():
     destinations = destination_repository.select_all()
     return render_template("destinations/index.html", all_destinations = destinations)
+
+@destinations_blueprint.route("/destinations/<id>/delete", methods = ['POST'])
+def delete_destination(id):
+    destination_repository.delete(id)
+    return redirect ('/')
+
+    
 
