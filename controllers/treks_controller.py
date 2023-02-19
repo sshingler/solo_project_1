@@ -5,10 +5,9 @@ from models.destination import Destination
 import repositories.destination_repository as destination_repository
 import repositories.trek_repository as trek_repository
 
-destinations_blueprint = Blueprint("destinations", __name__)
+treks_blueprint = Blueprint("treks", __name__)
 
-@destinations_blueprint.route("/destinations")
-def destinations():
-    destinations = destination_repository.select_all()
-    return render_template("destinations/index.html", all_destinations = destinations)
-
+@treks_blueprint.route("/treks")
+def treks():
+    treks = trek_repository.select_all()
+    return render_template ("treks/index.html", all_treks = treks)

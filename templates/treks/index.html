@@ -1,7 +1,22 @@
 {% extends "base.html" %}
-
 {% block content %}
-All treks here!  
 
+{% for treks in all_treks %} 
+
+    <div class = "trek">
+        <div class = "trek_content">
+            <hr>
+            <p> Name: {{treks.trek_name}} </p>
+            <p> Destination: {{treks.destination.destination_name}} </p>
+            <p> Distance: {{treks.trek_distance}}Km </p>
+            <p> Number of days: {{treks.trek_days}} </p>
+            <p> Headline: {{treks.trek_headline}} </p>
+            <p> Completed: {{treks.trek_completed}} </p>
+            <P> Notes: {{treks.trek_notes}} </p>
+            
+        </div>
+    </div>
+
+{% endfor %}
 
 {% endblock %}

@@ -24,7 +24,7 @@ def select_all():
         destination = destination_repository.select(row['destination_id'])
         trek = Trek(row['trek_name'], row ['trek_distance'], row ['trek_days'], row ['trek_headline'], row ['trek_completed'], row ['trek_notes'], destination, row ['id'])
         treks.append(trek)
-        return treks 
+    return treks 
 
 def select(id):
     trek = None
