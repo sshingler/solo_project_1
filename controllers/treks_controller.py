@@ -28,7 +28,7 @@ def create_trek():
     trek_distance = request.form['trek_distance']
     trek_days = request.form['trek_days']
     trek_headline = request.form['trek_headline']
-    trek_completed = request.form['trek_completed']
+    trek_completed = True if "trek_completed" in request.form else False 
     trek_notes = request.form['trek_notes']
     destination = destination_repository.select(request.form['destination_id'])
     trek = Trek(trek_name, trek_distance, trek_days, trek_headline, trek_completed, trek_notes, destination)
