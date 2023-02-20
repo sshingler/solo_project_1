@@ -1,24 +1,33 @@
 {% extends "base.html" %}
 {% block content %}
 
-{% for treks in all_treks %} 
+<h3>Add trek:</h3>
+
+<div class="buttons">
+    <form class = "add_trek_button" action = "/treks/new">
+        <button class="fa fa-solid fa-plus fa-3x" style="color:rgb(47, 192, 7)"></button>
+    </form>
+</div>
+
+<h3> All treks:</h3>
+<hr>
+{% for trek in all_treks %} 
 
     <div class = "trek">
         <div class = "trek_content">
-            <hr>
-            <p> Name: {{treks.trek_name}} </p>
-            <p> Destination: {{treks.destination.destination_name}} </p>
-            <p> Distance: {{treks.trek_distance}}Km </p>
-            <p> Number of days: {{treks.trek_days}} </p>
-            <p> Headline: {{treks.trek_headline}} </p>
-            <p> Completed: {{treks.trek_completed}} </p>
-            <P> Notes: {{treks.trek_notes}} </p>  
+            <p> Name: <a href = "/treks/{{trek.id}}">{{trek.trek_name}}</a> </p>
+            <p> Destination: {{trek.destination.destination_name}} </p>
+            <p> Distance: {{trek.trek_distance}}Km </p>
+            <p> Number of days: {{trek.trek_days}} </p>
+            <p> Headline: {{trek.trek_headline}} </p>
+            <p> Completed: {{trek.trek_completed}} </p>  
         </div>
         <div class="buttons">
-            <form class = "delete_button" action = "/treks/{{treks.id}}/delete" method = "POST">
+            <form class = "delete_button" action = "/treks/{{trek.id}}/delete" method = "POST">
                 <button class="fa fa-trash-o fa-3x" style="color:red"></button>
             </form>
         </div>
+        <hr>
     </div>
 
 {% endfor %}

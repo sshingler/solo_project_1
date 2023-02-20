@@ -17,8 +17,8 @@
     <br>
      <div>
          <label for = "country">Country:</label>
-         <select name="country" class="select_country" id="country">
-         <option value="0" label="Select country" selected="selected"> </option>
+         <select name="country" class="select_country" id="country" required>
+         <option value="{{destination.country}}" label="{{destination.country}}" selected="{{destination.country}}"> </option>
          <option value="Afghanistan">Afghanistan</option>
          <option value="Albania">Albania</option>
          <option value="Algeria">Algeria</option>
@@ -263,8 +263,8 @@
      <br>
      <div>
          <label for = "continent">Continent:</label>
-         <select name="continent" class="form-control" id="continent">
-         <option value="0" label="Continent" selected="selected"> </option>
+         <select name="continent" class="form-control" id="continent" required>
+         <option value="{{destination.continent}}" label="{{destination.continent}}" selected="{{destination.continent}}"> </option>
          <option value="Africa" label="Africa">Africa</option>
          <option value="Anatarctica" label="Antarctica">Antarctica</option>
          <option value="Asia" label="Asia">Asia</option>
@@ -275,8 +275,14 @@
      </div>
      <br>
      <div>
-        <input class="add-destination-button" type='submit' value="Add destination">
+        <input class="add-destination-button" type='submit' value="Update">
         </div>
  </form>
+
+ <div class="buttons">
+    <form class = "delete_button" action = "/destinations/{{destination.id}}/delete" method = "POST">
+        <button class="fa fa-trash-o fa-3x" style="color:red"></button>
+    </form>
+</div>
 
  {% endblock %}

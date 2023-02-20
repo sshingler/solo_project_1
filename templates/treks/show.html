@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3> Show trek:</h3>
+ <div>
+    <hr>
+    <p>Name: {{trek.trek_name}}</p>
+    <p>Destination: {{trek.destination.destination_name}}</p>
+    <p>Distance: {{trek.trek_distance}}Km</p>
+    <p>Number of days: {{trek.trek_days}}</p>
+    <p>Headline: {{trek.trek_headline}}</p>
+    <p>Completed: {{trek.trek_completed}}</p>
+    <p><a href="/treks/{{trek.id}}/edit">Edit trek</a></p>
+    <p>Notes: {{trek.trek_notes}}</p>   
+    <hr>
+  </div>
+
+
+  {% endblock %}
