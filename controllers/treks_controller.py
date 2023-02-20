@@ -19,9 +19,21 @@ def delete_trek(id):
 
 @treks_blueprint.route("/treks/new", methods = ['GET'])
 def new_trek():
-    destinations = destination_repository.select_all
+    destinations = destination_repository.select_all()
     return render_template("/treks/new.html", all_destinations = destinations)
 
+@treks_blueprint.route("/treks", methods = ['POST'])
+def create_trek():
+    trek_name = request.form['trek_name']
+    trek_distance = request.form['trek_distance']
+    trek_days = request.form['trek_days']
+    trek_headline = request.form['trek_headline']
+    trek_completed = request.form['trek_completed']
+    trek_notes = request.form['trek_notes']
+    destination = destination_repository.select(request.form['destination_id'])
+    trek = Trek(trek_name, trek_distance, trek_days, trek_headline, trek_completed, trek_notes, destination)
+    trek_repository.save(trek)
+    return redirect ('/treks')
 
 
 
