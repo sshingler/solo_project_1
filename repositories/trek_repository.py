@@ -45,3 +45,10 @@ def save(trek):
     id = results [0]['id']
     trek.id = id 
     return trek 
+
+def update(trek):
+    sql = "UPDATE treks SET (trek_name, trek_distance, trek_days, trek_headline, trek_completed, trek_notes, destination_id ) = (%s, %s, %s, %s, %s, %s, %s) WHERE id = %s"
+    values = [trek.trek_name, trek.trek_distance, trek.trek_days, trek.trek_headline, trek.trek_completed, trek.trek_notes, trek.destination.id, trek.id]
+    print(values)
+    run_sql(sql, values)
+    

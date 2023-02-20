@@ -3,6 +3,58 @@
 
 <h3>Edit trek:</h3>
 
+<form action = "/treks/{{trek.id}}" method = "POST">
+
+    <div>
+        <label for = "trek_name">Name:</label>
+        <input type = "text" id ="trek_name" name = "trek_name" value = "{{trek.trek_name}}" autofocus>
+    </div>
+    <br>
+    <div>
+        <label for = "trek_distance">Distance (km):</label>
+        <input type="number" step = "any" id ="trek_distance" name = "trek_distance" value = {{trek.trek_distance}}>
+    </div>
+    <br>
+    <div>
+        <label for = "trek_days">Number of days:</label>
+        <input type = "number" step= "any" id = "trek_days" name = "trek_days" value = {{trek.trek_days}}>
+    </div>
+    <br>
+    <div>
+        <label for = "trek_headline">Headline:</label>
+        <input type = "text" id = "trek_headline" name = "trek_headline" value = {{trek.trek_headline}}>
+    </div>
+    <br>
+    <div>
+        <label for = "trek_completed">Completed:</label>
+        <input type = "checkbox" id = "trek_completed" name= "trek_completed" value = {{trek.trek_completed}}>
+    </div>
+    <br>
+    <div>
+        <label for = "trek_notes">Notes:</label>
+        <input type = "text" id = "trek_notes" name = "trek_notes" value = {{trek.trek_notes}}>
+    </div>
+    <br>
+    <div>
+        <label for = "destination">Destination:</label>
+        <select name = "destination_id" id = "destination_id">
+            
+            {% for destination in all_destinations %} 
+                <option value = "{{destination.id}}"
+                {% if trek.destination.id == destination.id %} selected = "selected" {% endif %}>
+                {{destination.destination_name}}
+                </option>
+            {% endfor %} 
+        </select>
+    </div>
+    <br>
+    <div>
+        <input class="update-trek-button" type='submit' value= "Update">
+        </div>
+
+</form>
+
+
 
 
 {% endblock %}
