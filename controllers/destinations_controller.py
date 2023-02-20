@@ -34,7 +34,18 @@ def create_destination():
 @destinations_blueprint.route("/destinations/<id>", methods = ["GET"])
 def show_destination(id):
     destination = destination_repository.select(id)
-    
-    trek = trek_repository.select(destination)
-    return render_template("destinations/show.html", destination = destination, trek = trek)
+    return render_template("destinations/show.html", destination = destination)
 
+@destinations_blueprint.route("/destinations/<id>/edit", methods = ["GET"])
+def edit_destination(id):
+    destination = destination_repository.select(id)
+    return render_template("destinations/edit.html", destination = destination)
+
+@destinations_blueprint.route("/destinations/<id>", methods = ['POST'])
+def update_destination(id):
+    destination_name = request.form['destination_name']
+    country = request.form['country']
+    continent = request.form['continent']
+    destination = Destination(destination_name, country, continent, id)
+    destination_repository.update(destination)
+    return redirect ("/")

@@ -43,3 +43,9 @@ def save(destination):
     id = results [0]['id']
     destination.id = id
     return destination 
+
+def update(destination):
+    sql = "UPDATE destinations SET (destination_name, country, continent) = (%s, %s, %s) WHERE id = %s" 
+    values = [destination.destination_name, destination.country, destination.continent, destination.id]
+    print(values)
+    run_sql(sql, values)
