@@ -34,5 +34,7 @@ def create_destination():
 @destinations_blueprint.route("/destinations/<id>", methods = ["GET"])
 def show_destination(id):
     destination = destination_repository.select(id)
-    return render_template("destinations/show.html", destination = destination)
+    
+    trek = trek_repository.select(destination)
+    return render_template("destinations/show.html", destination = destination, trek = trek)
 

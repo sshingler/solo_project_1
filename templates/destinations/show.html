@@ -8,12 +8,32 @@
     <p>{{destination.country}}</p>
     <p>{{destination.continent}}</p>
     <p><a href="/destinations/{{destination.id}}/edit">Edit destination</a></p>
+    <div class="buttons">
+        <form class = "delete_button" action = "/destinations/{{destination.id}}/delete" method = "POST">
+            <button class="fa fa-trash-o fa-3x" style="color:red"></button>
+        </form>
+    </div>
     <hr>
   </div>
  
 
 <h3> Treks within destination:</h3>
 
+    {% for treks in all_treks %} 
+
+        <div class = "trek">
+            <div class = "trek_content">
+                <hr>
+                <p> Name: {{treks.trek_name}} </p>
+                <p> Destination: {{treks.destination.destination_name}} </p>
+                <p> Distance: {{treks.trek_distance}}Km </p>
+                <p> Number of days: {{treks.trek_days}} </p>
+                <p> Headline: {{treks.trek_headline}} </p>
+                <p> Completed: {{treks.trek_completed}} </p>
+                <P> Notes: {{treks.trek_notes}} </p>  
+            </div>
+
+    {% endfor %} 
 
 
 {% endblock %}

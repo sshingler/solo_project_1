@@ -11,21 +11,17 @@
 
 <h3>All destinations:</h3>
 
-{% for destinations in all_destinations %} 
+{% for destination in all_destinations %} 
 
     <div class = "destination">
         <div class = "destination_content">
             <hr>
-            <a href = "/destinations/{{destinations.id}}">{{destinations.destination_name}}</a>
-            <p> {{destinations.country}} </p>
-            <p> {{destinations.continent}} </p>
-        </div>
-        <div class="buttons">
-            <form class = "delete_button" action = "/destinations/{{destinations.id}}/delete" method = "POST">
-                <button class="fa fa-trash-o fa-3x" style="color:red"></button>
-            </form>
+            <a href = "/destinations/{{destination.id}}">{{destination.destination_name}}</a>
+            <p> {{destination.country}} </p>
+            <p> {{destination.continent}} </p>
         </div>
     </div>
+
 
 {% endfor %}
 
