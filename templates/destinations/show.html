@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3> Show destination:</h3>
+ <div>
+    <hr>
+    <p>{{destination.destination_name}}</p>
+    <p>{{destination.country}}</p>
+    <p>{{destination.continent}}</p>
+    <p><a href="/destinations/{{destination.id}}/edit">Edit destination</a></p>
+    <hr>
+  </div>
+ 
+
+<h3> Treks within destination:</h3>
+
+
+
+{% endblock %}

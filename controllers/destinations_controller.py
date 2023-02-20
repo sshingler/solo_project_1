@@ -31,3 +31,8 @@ def create_destination():
     destination_repository.save(destination)
     return redirect ('/')
 
+@destinations_blueprint.route("/destinations/<id>", methods = ["GET"])
+def show_destination(id):
+    destination = destination_repository.select(id)
+    return render_template("destinations/show.html", destination = destination)
+
