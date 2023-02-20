@@ -36,10 +36,12 @@ def create_trek():
     return redirect ('/treks')
 
 
-
-
-
 @treks_blueprint.route("/treks/<id>", methods = ["GET"])
 def show_trek(id):
     trek = trek_repository.select(id)
     return render_template("treks/show.html", trek = trek)
+
+@treks_blueprint.route("/treks/<id>/edit", methods = ["GET"])
+def edit_trek(id):
+    trek = trek_repository.select(id)
+    return render_template("treks/edit.html", trek = trek)
