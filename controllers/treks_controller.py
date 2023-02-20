@@ -17,6 +17,16 @@ def delete_trek(id):
     trek_repository.delete(id)
     return redirect ('/treks')
 
+@treks_blueprint.route("/treks/new", methods = ['GET'])
+def new_trek():
+    destinations = destination_repository.select_all
+    return render_template("/treks/new.html", all_destinations = destinations)
+
+
+
+
+
+
 @treks_blueprint.route("/treks/<id>", methods = ["GET"])
 def show_trek(id):
     trek = trek_repository.select(id)
