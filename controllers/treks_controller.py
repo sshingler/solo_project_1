@@ -17,6 +17,11 @@ def completed_treks():
     treks = trek_repository.select_all()
     return render_template ("treks/completed.html", all_treks = treks)
 
+@treks_blueprint.route("/treks/uncompleted")
+def uncomplete_treks():
+    treks = trek_repository.select_all()
+    return render_template ("treks/uncompleted.html", all_treks = treks)
+
 @treks_blueprint.route("/treks/<id>/delete", methods = ['POST'])
 def delete_trek(id):
     trek_repository.delete(id)
