@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <title>TrekTracker!</title>
+    <title>TrekTracker</title>
 </head>
 <body>
     <header>
+      <h1>TrekTracker</h1>
         <nav>
           <ul class="menu">
             <li><a href="{{ url_for ('home') }}">TrekHome</a></li>
@@ -19,11 +20,14 @@
         </nav>
       </header>
 
-      <div class="container">
-        {% block content %}
-
-        {% endblock %}
-      </div>
-
+      <main>
+        <section>
+          {% block content %}
+          {% endblock %}
+        </section>
+      </main>
+      <footer>
+        <p><strong> TrekTracker &copy; 2023</strong></p>
+      </footer>
 </body>
 </html>
