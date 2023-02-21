@@ -20,7 +20,7 @@ def completed_treks():
 @treks_blueprint.route("/treks/uncompleted")
 def uncompleted_treks():
     treks = trek_repository.select_all()
-    return render_template ("treks/uncompleted.html", all_treks = treks)
+    return render_template ("treks/incomplete.html", all_treks = treks)
 
 @treks_blueprint.route("/treks/<id>/delete", methods = ['POST'])
 def delete_trek(id):

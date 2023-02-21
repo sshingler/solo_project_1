@@ -12,21 +12,24 @@
 
 <h3> Treks within destination:</h3>
 
-    {% for treks in all_treks %} 
+    
+{% for trek in all_treks %}
+  
+{% if trek.destination.destination_name == destination.destination_name %}
+    <div class = "trek">
+        <div class = "trek_content">
+            <p> Name: {{trek.trek_name}} </p>
+            <p> Distance: {{trek.trek_distance}}Km </p>
+            <p> Number of days: {{trek.trek_days}} </p>
+            <p> Headline: {{trek.trek_headline}} </p>
+            <p> Completed: {{trek.trek_completed}} </p>
+            <P> Notes: {{trek.trek_notes}} </p>  
+            <hr>
+        </div>
+    </div>
+   {% endif %}
 
-        <div class = "trek">
-            <div class = "trek_content">
-                <hr>
-                <p> Name: {{treks.trek_name}} </p>
-                <p> Destination: {{treks.destination.destination_name}} </p>
-                <p> Distance: {{treks.trek_distance}}Km </p>
-                <p> Number of days: {{treks.trek_days}} </p>
-                <p> Headline: {{treks.trek_headline}} </p>
-                <p> Completed: {{treks.trek_completed}} </p>
-                <P> Notes: {{treks.trek_notes}} </p>  
-            </div>
-
-    {% endfor %} 
+{% endfor %}   
 
 
 {% endblock %}

@@ -11,7 +11,7 @@ destination_repository.delete_all()
 destination_1 = Destination("Snowdonia National Park", "United Kingdom", "Europe")
 destination_repository.save(destination_1)
 
-destination_2 = Destination("Cairn Gorms National Park", "United Kingdom", "Europe")
+destination_2 = Destination("Cairngorms National Park", "United Kingdom", "Europe")
 destination_repository.save(destination_2)
 
 trek_1 = Trek ("Snowdon Ascent", 14.5, 1, "Reach the summit of Snowdon via Llanberris Path", False, "Test notes 123", destination_1)

@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3> Uncompleted treks:</h3>
+<h3> Incomplete treks:</h3>
 {% for trek in all_treks %} 
     {% if trek.trek_completed == False %}
 
