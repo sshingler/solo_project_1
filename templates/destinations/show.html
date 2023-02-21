@@ -18,13 +18,11 @@
 {% if trek.destination.destination_name == destination.destination_name %}
     <div class = "trek">
         <div class = "trek_content">
-            <p> Name: {{trek.trek_name}} </p>
+            <p> Name: <a href = "/treks/{{trek.id}}">{{trek.trek_name}}</a> </p>
             <p> Distance: {{trek.trek_distance}}Km </p>
             <p> Number of days: {{trek.trek_days}} </p>
             <p> Headline: {{trek.trek_headline}} </p>
-            <p> Completed: {{trek.trek_completed}} </p>
-            <P> Notes: {{trek.trek_notes}} </p>  
-            <hr>
+            <p> Completed: {{trek.trek_completed}} </p>  
         </div>
     </div>
    {% endif %}
