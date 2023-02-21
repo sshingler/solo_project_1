@@ -1,0 +1,34 @@
+body {
+    font-family:sans-serif;
+    background:#89A894;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+
+}
+
+header {
+    background: #49393B;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+header > h1 {
+    color: white;
+    margin: 0;
+}
+
+header > nav > ul {
+    display: flex; 
+    gap: 1rem; 
+    list-style: none;
+    margin: 0;
+    padding: 0; 
+}
+
+nav > ul > li > a {
+    color:white;
+}
