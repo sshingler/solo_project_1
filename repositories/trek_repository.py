@@ -48,7 +48,12 @@ def total_distance():
         total_distance = total_distance + trek.trek_distance
     return total_distance 
         
-
+def total_days():
+    all_treks = select_all()
+    total_days = 0
+    for trek in all_treks:
+        total_days = total_days + trek.trek_days 
+    return total_days 
 
 
 
