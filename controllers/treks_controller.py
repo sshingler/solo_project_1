@@ -12,6 +12,11 @@ def treks():
     treks = trek_repository.select_all()
     return render_template ("treks/index.html", all_treks = treks)
 
+@treks_blueprint.route("/treks/completed")
+def completed_treks():
+    treks = trek_repository.select_all()
+    return render_template ("treks/completed.html", all_treks = treks)
+
 @treks_blueprint.route("/treks/<id>/delete", methods = ['POST'])
 def delete_trek(id):
     trek_repository.delete(id)
@@ -21,6 +26,7 @@ def delete_trek(id):
 def new_trek():
     destinations = destination_repository.select_all()
     return render_template("/treks/new.html", all_destinations = destinations)
+
 
 @treks_blueprint.route("/treks", methods = ['POST'])
 def create_trek():
@@ -59,3 +65,4 @@ def update_trek(id):
     trek = Trek(trek_name, trek_distance, trek_days, trek_headline, trek_completed, trek_notes, destination, id)
     trek_repository.update(trek)
     return redirect ('/treks')
+
