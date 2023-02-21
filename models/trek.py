@@ -9,4 +9,3 @@ class Trek:
         self.destination = destination 
         self.id = id
 
-    

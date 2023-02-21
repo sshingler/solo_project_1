@@ -26,6 +26,34 @@ def select_all():
         treks.append(trek)
     return treks 
 
+def select_completed():
+    completed_treks = []
+
+    sql = "SELECT * FROM treks WHERE trek_completed = %s"
+    values = [True]
+
+    results = run_sql(sql, values)
+
+    for row in results:
+        destination = destination_repository.select(row['destination_id'])
+        trek = Trek(row['trek_name'], row ['trek_distance'], row ['trek_days'], row ['trek_headline'], row ['trek_completed'], row ['trek_notes'], destination, row ['id'])
+        completed_treks.append(trek)
+    return completed_treks 
+
+
+def total_distance():
+    all_treks = select_all() 
+    total_distance = 0
+    for trek in all_treks:
+        total_distance = total_distance + trek.trek_distance
+    return total_distance 
+        
+
+
+
+
+
+
 def select(id):
     trek = None
     sql = "SELECT * FROM treks WHERE id = %s"
@@ -51,4 +79,5 @@ def update(trek):
     values = [trek.trek_name, trek.trek_distance, trek.trek_days, trek.trek_headline, trek.trek_completed, trek.trek_notes, trek.destination.id, trek.id]
     print(values)
     run_sql(sql, values)
-    
+
+
