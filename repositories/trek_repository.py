@@ -40,6 +40,20 @@ def select_completed():
         completed_treks.append(trek)
     return completed_treks 
 
+def select_uncompleted():
+    uncompleted_treks = []
+
+    sql = "SELECT * FROM treks WHERE trek_completed = %s"
+    values = [False]
+
+    results = run_sql(sql, values)
+
+    for row in results:
+        destination = destination_repository.select(row['destination_id'])
+        trek = Trek(row['trek_name'], row ['trek_distance'], row ['trek_days'], row ['trek_headline'], row ['trek_completed'], row ['trek_notes'], destination, row ['id'])
+        uncompleted_treks.append(trek)
+    return uncompleted_treks
+
 
 def total_distance():
     all_treks = select_all() 

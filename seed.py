@@ -23,7 +23,9 @@ trek_repository.save(trek_2)
 trek_3 = Trek ("Cairn Gorm & Ben Macdui", 17.5, 1, "Summit Ben Macdui crossing the Cairn Gorm Plateau", False, "Test notes 123", destination_2)
 trek_repository.save(trek_3)
 
-test_completed_treks = trek_repository.select_completed()
+
+
+test_uncompleted_treks = trek_repository.select_uncompleted()
 
 breakpoint()
 

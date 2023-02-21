@@ -13,9 +13,10 @@ app.register_blueprint(treks_blueprint)
 @app.route('/')
 def home():
     completed_treks = trek_repository.select_completed()
+    uncompleted_treks = trek_repository.select_uncompleted()
     total_distance = trek_repository.total_distance()
     total_days = trek_repository.total_days()
-    return render_template('index.html', completed_treks = completed_treks, total_distance = total_distance, total_days = total_days)
+    return render_template('index.html', completed_treks = completed_treks, uncompleted_treks = uncompleted_treks, total_distance = total_distance, total_days = total_days)
 
 if __name__ == '__main__':
     app.run(debug=True)

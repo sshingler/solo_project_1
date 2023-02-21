@@ -18,7 +18,7 @@ def completed_treks():
     return render_template ("treks/completed.html", all_treks = treks)
 
 @treks_blueprint.route("/treks/uncompleted")
-def uncomplete_treks():
+def uncompleted_treks():
     treks = trek_repository.select_all()
     return render_template ("treks/uncompleted.html", all_treks = treks)
 
