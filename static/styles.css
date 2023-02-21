@@ -102,18 +102,13 @@ footer {
     border: 2px solid black;
     border-radius: 1rem; 
     margin: 1rem;
-    display: flex;
-    justify-content: center;
-
 }
 
 .destination_show {
     background:#E2E2E2;
     padding: 1rem; 
     border: 2px solid black;
-    border-radius: 1rem; 
-    display: flex;
-    
+    border-radius: 1rem;    
 }
 
 .new_destination {
