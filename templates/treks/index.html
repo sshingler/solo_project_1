@@ -1,14 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3>Add trek:</h3>
-
-<div class="buttons">
-    <form class = "add_trek_button" action = "/treks/new">
-        <button class="fa fa-solid fa-plus fa-3x" style="color:rgb(47, 192, 7)"></button>
-    </form>
-</div>
-
 <h3> All treks:</h3>
 {% for trek in all_treks %} 
 
@@ -19,7 +11,13 @@
             <p> Distance: {{trek.trek_distance}}Km </p>
             <p> Number of days: {{trek.trek_days}} </p>
             <p> Headline: {{trek.trek_headline}} </p>
-            <p> Completed: {{trek.trek_completed}} </p>  
+            <p> Completed: 
+                {% if trek.trek_completed %} 
+                <span> &#9989;</span>
+                {% else %} 
+                <span>&#10060;</span>
+                {% endif %}
+            </p>  
         </div>
     </div>
 

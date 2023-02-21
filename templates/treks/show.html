@@ -8,7 +8,13 @@
     <p>Distance: {{trek.trek_distance}}Km</p>
     <p>Number of days: {{trek.trek_days}}</p>
     <p>Headline: {{trek.trek_headline}}</p>
-    <p>Completed: {{trek.trek_completed}}</p>
+    <p>Completed: 
+      {% if trek.trek_completed %} 
+      <span> &#9989;</span>
+      {% else %} 
+      <span>&#10060;</span>
+      {% endif %}
+    </p>
     <p><a href="/treks/{{trek.id}}/edit">Edit trek</a></p>
     <p>Notes: {{trek.trek_notes}}</p>   
   </div>

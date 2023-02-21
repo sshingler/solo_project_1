@@ -14,10 +14,26 @@
         <nav>
           <ul class="menu">
             <li><a href="{{ url_for ('home') }}">TrekHome</a></li>
-            <li><a href="/destinations">AllDestinations</a></li>
-            <li><a href="/treks">AllTreks</a></li>
+            <li>
+              <div class = "dropdown_destination">
+              <button class = "dropdestinationbtn">Destinations</button>
+              <div class = "dropdown_destination_content">
+                <a href="/destinations">All Destinations</a>
+                <a href="/destinations/new">Add Destination</a>
+              </div>
+            </div>
+          </li>
+          <div class = "dropdown_treks">
+            <button class = "droptreksbtn">Treks</button>
+            <div class = "dropdown_treks_content">
+              <a href="/treks">All Treks</a>
+              <a href="/treks/new">Add Trek</a>
+            </div>
+          </div></li>
           </ul>
         </nav>
+
+
       </header>
 
       <main>

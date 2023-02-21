@@ -1,14 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3>Add destination:</h3>
-
-<div class="buttons">
-    <form class = "add_destination_button" action = "/destinations/new">
-        <button class="fa fa-solid fa-plus fa-3x" style="color:rgb(47, 192, 7)"></button>
-    </form>
-</div>
-
 <h3>All destinations:</h3>
 
 {% for destination in all_destinations %} 
@@ -24,5 +16,6 @@
 
 
 {% endfor %}
+
 
 {% endblock %}

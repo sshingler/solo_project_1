@@ -35,6 +35,90 @@ nav > ul > li > a {
     color:white;
 }
 
+
+
+.dropdestinationbtn {
+    background-color:#49393B;
+    color:white ;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown_destination {
+    display:inline-block;
+    position: relative;
+}
+
+.dropdown_destination_content {
+    display:none;
+    position:absolute;
+    background-color: #f9f9f9;
+    width: 120%;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown_destination:hover .dropdown_destination_content {
+    display: block; 
+}
+
+.dropdown_destination_content a {
+    display: block; 
+    color: #000000; 
+    padding: 12px 16px;
+    text-decoration: none;
+}
+
+.dropdown_destination_content a:hover {
+    background-color: #f1f1f1 ;
+}
+
+.droptreksbtn {
+    background-color:#49393B;
+    color:white ;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown_treks {
+    display:inline-block;
+    position: relative;
+}
+
+.dropdown_treks_content {
+    display:none;
+    position:absolute;
+    background-color: #f9f9f9;
+    width: 120%;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown_treks:hover .dropdown_treks_content {
+    display: block; 
+}
+
+.dropdown_treks_content a {
+    display: block; 
+    color: #000000; 
+    padding: 12px 16px;
+    text-decoration: none;
+}
+
+.dropdown_treks_content a:hover {
+    background-color: #f1f1f1 ;
+}
+
+
+
+
+
 main {
     margin: auto;
 }
@@ -124,3 +208,4 @@ footer {
     border: 2px solid black;
     border-radius: 1rem; 
 }
+
