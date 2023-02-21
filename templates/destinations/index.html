@@ -10,7 +10,7 @@
 </div>
 
 <h3>All destinations:</h3>
-<hr>
+
 {% for destination in all_destinations %} 
 
     <div class = "destination">
@@ -19,7 +19,6 @@
             <a href = "/destinations/{{destination.id}}">{{destination.destination_name}}</a>
             <p> {{destination.country}} </p>
             <p> {{destination.continent}} </p>
-            <hr>
         </div>
     </div>
 

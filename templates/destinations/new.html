@@ -1,8 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3>Add destination:</h3>
 
+
+<div class="new_destination">
+    <h3>Add destination:</h3>
 <form action ="/destinations" method  = "POST">
     
     
@@ -275,5 +277,5 @@
     <input class="add-destination-button" type='submit' value="Add destination">
     </div>
 </form>
-
+</div>
 {% endblock %}

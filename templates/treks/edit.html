@@ -1,8 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3>Edit trek:</h3>
 
+
+<div class ="edit_trek">
+    <h3>Edit trek:</h3>
 <form action = "/treks/{{trek.id}}" method = "POST">
 
     <div>
@@ -53,13 +55,14 @@
         </div>
 
 </form>
-<br>
-<div class="buttons">
-    <form class = "delete_button" action = "/treks/{{trek.id}}/delete" method = "POST">
-        <button class="fa fa-trash-o fa-3x" style="color:red"></button>
-    </form>
-</div>
 
+    <br>
+    <div class="buttons">
+        <form class = "delete_button" action = "/treks/{{trek.id}}/delete" method = "POST">
+            <button class="fa fa-trash-o fa-3x" style="color:red"></button>
+        </form>
+    </div>
+</div>
 
 
 {% endblock %}

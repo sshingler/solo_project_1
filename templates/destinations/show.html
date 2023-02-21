@@ -2,13 +2,11 @@
 {% block content %}
 
 <h3> Show destination:</h3>
- <div>
-    <hr>
+ <div class="destination_show">
     <p>{{destination.destination_name}}</p>
     <p>{{destination.country}}</p>
     <p>{{destination.continent}}</p>
     <p><a href="/destinations/{{destination.id}}/edit">Edit destination</a></p>
-    <hr>
   </div>
  
 

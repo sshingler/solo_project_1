@@ -1,8 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3>Edit destination:</h3>
 
+<div class="edit_destination">
+    <h3>Edit destination:</h3>
 <form action ="/destinations/{{destination.id}}" method  = "POST">
 
    
@@ -284,5 +285,4 @@
         <button class="fa fa-trash-o fa-3x" style="color:red"></button>
     </form>
 </div>
-
  {% endblock %}

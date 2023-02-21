@@ -10,7 +10,6 @@
 </div>
 
 <h3> All treks:</h3>
-<hr>
 {% for trek in all_treks %} 
 
     <div class = "trek">
@@ -22,8 +21,6 @@
             <p> Headline: {{trek.trek_headline}} </p>
             <p> Completed: {{trek.trek_completed}} </p>  
         </div>
-
-        <hr>
     </div>
 
 {% endfor %}

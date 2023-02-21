@@ -52,3 +52,80 @@ footer {
     display: flex; 
     justify-content: center;
 }
+
+.home_content {
+    background:#E2E2E2;
+    padding: 1rem; 
+    border: 2px solid black;
+    border-radius: 1rem; 
+    
+}
+
+.home_content > h3 {
+    text-align: center;
+}
+
+.trek {
+    background:#E2E2E2;
+    padding: 1rem; 
+    border: 2px solid black;
+    border-radius: 1rem; 
+    margin: 1rem;
+}
+
+
+
+.trek_show {
+    background:#E2E2E2;
+    padding: 1rem; 
+    border: 2px solid black;
+    border-radius: 1rem; 
+}
+
+.edit_trek {
+    background:#E2E2E2;
+    padding: 1rem; 
+    border: 2px solid black;
+    border-radius: 1rem; 
+}
+
+.new_trek {
+    background:#E2E2E2;
+    padding: 1rem; 
+    border: 2px solid black;
+    border-radius: 1rem; 
+}
+
+.destination {
+    background:#E2E2E2;
+    padding: 1rem; 
+    border: 2px solid black;
+    border-radius: 1rem; 
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+
+}
+
+.destination_show {
+    background:#E2E2E2;
+    padding: 1rem; 
+    border: 2px solid black;
+    border-radius: 1rem; 
+    display: flex;
+    
+}
+
+.new_destination {
+    background:#E2E2E2;
+    padding: 1rem; 
+    border: 2px solid black;
+    border-radius: 1rem; 
+}
+
+.edit_destination {
+    background:#E2E2E2;
+    padding: 1rem; 
+    border: 2px solid black;
+    border-radius: 1rem; 
+}
