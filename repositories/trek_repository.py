@@ -59,7 +59,8 @@ def total_distance():
     all_treks = select_all() 
     total_distance = 0
     for trek in all_treks:
-        total_distance = total_distance + trek.trek_distance
+        if trek.trek_completed == True:
+            total_distance = total_distance + trek.trek_distance
     return total_distance 
         
 def total_days():
