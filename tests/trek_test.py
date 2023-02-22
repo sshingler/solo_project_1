@@ -17,3 +17,8 @@ class TestTrek(unittest.TestCase):
         expected = 14.5 
         actual = self.trek.trek_distance
         self.assertEqual(expected, actual)
+
+    def test_trek_has_days(self): 
+        expected = 1 
+        actual = self.trek.trek_days
+        self.assertEqual(expected, actual)
