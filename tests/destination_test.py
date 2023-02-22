@@ -17,4 +17,9 @@ class TestDestination(unittest.TestCase):
         expected = "United Kingdom"
         actual = self.destination.country
         self.assertEqual(expected, actual)
+
+    def test_destination_has_continent(self): 
+        expected = "Europe"
+        actual = self.destination.continent
+        self.assertEqual(expected, actual)
     
