@@ -27,3 +27,8 @@ class TestTrek(unittest.TestCase):
         expected = "Reach the"
         actual = self.trek.trek_headline
         self.assertEqual(expected, actual)
+
+    def test_trek_has_completed(self): 
+        expected = False
+        actual = self.trek.trek_completed
+        self.assertEqual(expected, actual)
