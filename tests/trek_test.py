@@ -37,3 +37,8 @@ class TestTrek(unittest.TestCase):
         expected = "Test notes 123"
         actual = self.trek.trek_notes
         self.assertEqual(expected, actual)
+
+    def test_trek_has_destination(self): 
+        expected = "destination_1"
+        actual = self.trek.destination
+        self.assertEqual(expected, actual)
