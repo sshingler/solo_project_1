@@ -11,17 +11,10 @@ body {
 header {
     background: #49393B;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    gap: 1rem;
-    padding: 1rem; 
 }
 
-header > h1 > a {
-    color: white;
-    margin: 0;
-}
+
 
 header > nav > ul {
     display: flex; 
@@ -142,6 +135,7 @@ footer {
     padding: 1rem; 
     border: 2px solid black;
     border-radius: 1rem; 
+    margin: 1rem;
     
 }
 
