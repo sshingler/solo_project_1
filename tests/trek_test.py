@@ -12,3 +12,8 @@ class TestTrek(unittest.TestCase):
         expected = "Snowdon Ascent"
         actual = self.trek.trek_name
         self.assertEqual(expected, actual)
+
+    def test_trek_has_distance(self): 
+        expected = 14.5 
+        actual = self.trek.trek_distance
+        self.assertEqual(expected, actual)
